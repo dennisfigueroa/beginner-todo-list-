@@ -53,20 +53,20 @@
        alert("She clear boh!");
      } */
 
-    var emptyButton = document.getElementById("empty-button");
-      emptyButton.addEventListener("click", emptyList);
+    var emptyButton = document.getElementById("empty-button");        // becomes the ID equivalent in HTML for Empty Button
+      emptyButton.addEventListener("click", emptyList);               // upon click, runs Empty list
 
      function emptyList() {
       alert("Empty!");
 
-      var todoList = document.getElementById("todo-list");
-      var lastChild = todoList.lastElementChild;
-      deletingList(lastChild);
+      var todoList = document.getElementById("todo-list");            // get todo-list
+      var lastChild = todoList.lastElementChild;                      // get the last element of the to-do list
+      deletingList(lastChild);                                        // runs function with the lastchild parameter
 
       function deletingList(lastChild){
-         while (lastChild) {
+         while (lastChild) {                                          // loop to remove child of todoList that is (LASTCHILD)
          todoList.removeChild(lastChild);
-         lastChild = todoList.lastElementChild;
+         lastChild = todoList.lastElementChild;                       // makes thew new lastchild the next element after the original is deleted
        }
     }
 }
