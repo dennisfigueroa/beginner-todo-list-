@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>JavaScript to do list</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="todo-wrapper">
+        <h2>My to-do list</h2>
+        <p>Double-click an item to mark it complete.</p>
+        <form name="todo-adder">
+            <input type="text" id="todo-entry-box" />
+        </form>
+        <button id="add-button" class="pretty-button">Add</button>
+        <br />
+        <ol id="todo-list">
+                  </ol>
+        <div id="control-wrapper">
+            <button id="clear-completed-button" class="pretty-button">Clear Completed</button>
+            <button id="empty-button" class="pretty-button">Empty List</button>
+            <button id="save-button" class="pretty-button">Save List</button>
+        </div>
+    </div>
+
+    <script>
+
+    //  var toDoEntryBox = document.getElementById("todo-entry-box");     // todoEntrybox = the ID equivalent in HTMl
+    //  var todoList = document.getElementById("todo-list");              // todoList = the ID equivalent in HTMl
+
+
+     var addButton = document.getElementById("add-button"); // telling Javascript to get the element from the HTML doc that has the id Add-Button
+      addButton.addEventListener("click", addtodoItem);  // Event listener so Javascript will 'listen' to the event and run a function when it hears it
+
+      function addtodoItem() {
+        var toDoEntryBox = document.getElementById("todo-entry-box");  // becomes ID equivalent in html
+        var itemText = toDoEntryBox.value;                             // makes itemText the value that is recorded when someone types
+        newtodoItem(itemText);                                 // tells the script to run the newtodoItem program
+      }
+
+      function newtodoItem(itemText){                        //  itemText is from the addtodoItem and is the parameter, completed functionality i'll do later
+      var todoItem = document.createElement("li");                      // Create a <li> node
+      var todoText = document.createTextNode(itemText);                 // Create a text node
+       todoItem.appendChild (todoText);                                // Append the text to <li>
+        document.getElementById("todo-list").appendChild(todoItem);
+      }
+
+       /* var clearCompleted = document.getElementById("clear-completed-button");
+      clearCompleted.addEventListener("click", cleared);
+      function cleared() {
+       alert("She clear boh!");
+     } */
+
+    var emptyButton = document.getElementById("empty-button");
+      emptyButton.addEventListener("click", emptyList);
+
+     function emptyList() {
+      alert("Empty!");
+
+      var todoList = document.getElementById("todo-list");
+      var lastChild = todoList.lastElementChild;
+      deletingList(lastChild);
+
+      function deletingList(lastChild){
+         while (lastChild) {
+         todoList.removeChild(lastChild);
+         lastChild = todoList.lastElementChild;
+       }
+    }
+}
+/*    var saveButton = document.getElementById("save-button");
+      saveButton.addEventListener("click", saveList);
+      function saveList() {
+       alert("Saved!");
+    }
+*/
+
+
+
+
+    </script>
+
+
+    </body>
+
+</html>
