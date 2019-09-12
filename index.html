@@ -2,20 +2,34 @@
 <html lang="en" dir="ltr">
 <head>
     <title>JavaScript to do list</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="todo-wrapper">
+  <div class = "header">
+    <div class = "inner_header">
+        <div class ="logo_container">
+          <h1><span>TASK LIST</span></h1>
+        </div>
+
+        <ul class = "navigation">
+              <a><li>Home</li> </a>
+              <a><li>Contact Us</li> </a>
+              <a><li>Settings</li> </a>
+            </ul>
+
+    </div>
+  </div>
+  <div class="todo-wrapper">
         <h2>My to-do list</h2>
         <p>Double-click an item to mark it complete.</p>
         <form name="todo-adder">
             <input type="text" id="todo-entry-box" />
         </form>
         <button id="add-button" class="pretty-button">Add</button>
-        <br />
+
         <ol id="todo-list">
                   </ol>
         <div id="control-wrapper">
@@ -70,12 +84,23 @@
        }
     }
 }
-/*    var saveButton = document.getElementById("save-button");
+var myArray = []
+myarray.push("generic to store")
+myarray.push("more generic to store")
+alert (myArray[0])
+
+var todoInfo = {
+
+  "task": "Thing I need to do"
+  }
+
+
+  var saveButton = document.getElementById("save-button");
       saveButton.addEventListener("click", saveList);
       function saveList() {
        alert("Saved!");
     }
-*/
+
 
 
 
