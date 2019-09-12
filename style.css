@@ -120,11 +120,17 @@
     color: #666;
 }
 
+.todo-wrapper #add-button {
+      margin-left: 50px;
+      font-family: 'Raleway', sans-serif;
+
+}
+
 .todo-wrapper .pretty-button {
     margin: 10px 2px;
     padding: 5px 20px;
     border-radius: 15px;
-    background-color: #0093D5;
+        background-color: rgb(255, 139, 139);
     border: none;
     color: #fff;
     text-align: center;
@@ -150,20 +156,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 700px;
+    width: 600px;
 }
 
-.todo-wrapper #clear-button {
-    background-color: #49B749;
+.todo-wrapper #clear-completed-button {
+    background-color: rgb(255, 139, 139);
+    font-family: 'Raleway', sans-serif;
 
 }
 
 .todo-wrapper #empty-button {
-    background-color: #9B1C20;
+    background-color: rgb(255, 139, 139);
+    font-family: 'Raleway', sans-serif;
 }
 
 .todo-wrapper #save-button {
-    background-color: #49B749;
+    background-color: rgb(255, 139, 139);
+    font-family: 'Raleway', sans-serif;
 }
 
 @media only screen and (min-width: 1400px) {
