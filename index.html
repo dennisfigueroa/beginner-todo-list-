@@ -71,8 +71,6 @@
       emptyButton.addEventListener("click", emptyList);               // upon click, runs Empty list
 
      function emptyList() {
-      alert("Empty!");
-
       var todoList = document.getElementById("todo-list");            // get todo-list
       var lastChild = todoList.lastElementChild;                      // get the last element of the to-do list
       deletingList(lastChild);                                        // runs function with the lastchild parameter
